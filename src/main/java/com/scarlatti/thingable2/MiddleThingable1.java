@@ -8,9 +8,12 @@ package com.scarlatti.thingable2;
  * Tuesday, 8/7/2018
  */
 public class MiddleThingable1 implements Thingable {
+
+    private Run run = new Run();
+
     @Override
     public void run() {
-        System.out.println("BasicThingable.run() will not run");
+        run.run();
     }
 
     @Override
@@ -21,5 +24,12 @@ public class MiddleThingable1 implements Thingable {
     @Override
     public void kite() {
         System.out.println("BasicThingable.kite() ");
+    }
+
+    public static class Run implements Runnable {
+        @Override
+        public void run() {
+            System.out.println("BasicThingable.run() will not run");
+        }
     }
 }

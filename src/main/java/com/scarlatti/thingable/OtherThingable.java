@@ -1,4 +1,4 @@
-package com.scarlatti.thinagable;
+package com.scarlatti.thingable;
 
 /**
  * ______    __                         __           ____             __     __  __  _

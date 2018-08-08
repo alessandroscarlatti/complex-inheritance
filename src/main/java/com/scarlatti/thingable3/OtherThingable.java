@@ -1,4 +1,4 @@
-package com.scarlatti.thingable2;
+package com.scarlatti.thingable3;
 
 /**
  * ______    __                         __           ____             __     __  __  _
@@ -11,16 +11,18 @@ package com.scarlatti.thingable2;
  */
 public class OtherThingable implements Thingable {
 
-    private MiddleThingable1.Run run = new MiddleThingable1.Run();
-    private BasicThingable.Hide hide = new BasicThingable.Hide();
-    private MiddleThingable2.Kite kite = new MiddleThingable2.Kite();
+    private String name;
+
+    public OtherThingable(String name) {
+        this.name = name;
+    }
 
     /**
      * Inherit from MiddleThingable1...
      */
     @Override
     public void run() {
-        run.run();
+        System.out.println("OtherThingable.run() " + name + " will not run");
     }
 
     /**
@@ -28,7 +30,7 @@ public class OtherThingable implements Thingable {
      */
     @Override
     public void hide() {
-        hide.run();
+        System.out.println("OtherThingable.hide() " + name);
     }
 
     /**
@@ -36,7 +38,6 @@ public class OtherThingable implements Thingable {
      */
     @Override
     public void kite() {
-
-        kite.run();
+        System.out.println("OtherThingable.kite() " + name + " will not kite");
     }
 }

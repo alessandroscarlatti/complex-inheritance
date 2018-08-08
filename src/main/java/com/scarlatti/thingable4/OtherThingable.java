@@ -1,4 +1,4 @@
-package com.scarlatti.thingable2;
+package com.scarlatti.thingable4;
 
 /**
  * ______    __                         __           ____             __     __  __  _
@@ -12,7 +12,14 @@ package com.scarlatti.thingable2;
 public class OtherThingable implements Thingable {
 
     private MiddleThingable1.Run run = new MiddleThingable1.Run();
-    private BasicThingable.Hide hide = new BasicThingable.Hide();
+    private BasicThingable.InnerClassHide hide = new BasicThingable("phil").new InnerClassHide();
+    private BasicThingable.Hide hide2 = new BasicThingable.Hide(new BasicThingable("phil"));
+    private BasicThingable.InnerClassHide hide3 = new BasicThingable("phil").new InnerClassHide() {
+        @Override
+        public void run() {
+            System.out.println("name: " + new BasicThingable("phil").name);
+        }
+    };
     private MiddleThingable2.Kite kite = new MiddleThingable2.Kite();
 
     /**

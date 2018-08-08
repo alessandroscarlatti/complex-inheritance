@@ -1,4 +1,4 @@
-package com.scarlatti.thinagable;
+package com.scarlatti.thingable3;
 
 /**
  * ______    __                         __           ____             __     __  __  _
@@ -7,20 +7,26 @@ package com.scarlatti.thinagable;
  * /_/ |_/_/\__/___/___/\_,_/_//_/\_,_/_/  \___/ /___/\__/\_,_/_/ /_/\_,_/\__/\__/_/
  * Tuesday, 8/7/2018
  */
-public class BasicThingable implements Thingable {
+public class MiddleThingable1 implements Thingable {
+
+    private String name;
+
+    public MiddleThingable1(String name) {
+        this.name = name;
+    }
 
     @Override
     public void run() {
-        System.out.println("BasicThingable.run() ");
+        System.out.println("BasicThingable.run() " + name + " will not run");
     }
 
     @Override
     public void hide() {
-        System.out.println("BasicThingable.hide() ");
+        System.out.println("BasicThingable.hide() " + name + " will not hide");
     }
 
     @Override
     public void kite() {
-        System.out.println("BasicThingable.kite() ");
+        System.out.println("BasicThingable.kite() " + name);
     }
 }

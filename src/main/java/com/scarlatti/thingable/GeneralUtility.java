@@ -1,6 +1,4 @@
-package com.scarlatti;
-
-import com.scarlatti.thinagable.*;
+package com.scarlatti.thingable;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +18,7 @@ public class GeneralUtility implements Runnable {
     @Override
     public void run() {
         for (Thingable thingable : thingables()) {
+            System.out.println(thingable.getClass().getName());
             thingable.run();
             thingable.hide();
             thingable.kite();

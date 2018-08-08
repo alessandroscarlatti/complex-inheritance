@@ -1,4 +1,4 @@
-package com.scarlatti.thingable2;
+package com.scarlatti.thingable3;
 
 /**
  * ______    __                         __           ____             __     __  __  _
@@ -9,30 +9,24 @@ package com.scarlatti.thingable2;
  */
 public class BasicThingable implements Thingable {
 
-    private Hide hide = new Hide();
+    private String name;
+
+    public BasicThingable(String name) {
+        this.name = name;
+    }
 
     @Override
     public void run() {
-        System.out.println("BasicThingable.run() ");
+        System.out.println("BasicThingable.run() " + name);
     }
 
-    /**
-     * Inherited by OtherThingable
-     */
     @Override
     public void hide() {
-        hide.run();
+        System.out.println("BasicThingable.hide() " + name);
     }
 
     @Override
     public void kite() {
-        System.out.println("BasicThingable.kite() ");
-    }
-
-    public static class Hide implements Runnable {
-        @Override
-        public void run() {
-            System.out.println("BasicThingable.hide() ");
-        }
+        System.out.println("BasicThingable.kite() " + name);
     }
 }
